@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffre-fort de Pirate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        .safe-container {
+            position: relative;
+            display: inline-block;
+        }
+        .safe-door {
+            width: 500px;
+            height: 350px;
+            background-color: #4d2800; /* Marron pour le bois */
+            border: 5px solid #2e1500; /* Contour du bois */
+            
+            background-image: url('https://live.staticflickr.com/65535/53181716709_53f8d7fae2_b.jpg'); /* Image du coffre */
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+        
+        .message {
+            font-size: 24px;
+            color: #1b1919;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="margin-top: 10px; font-size: 135px; text-align: center;">Félicitations</h1>
+        <img src="https://live.staticflickr.com/65535/53181716709_53f8d7fae2_b.jpg">
+        <div class="safe-container">
+            
+            <div class="message" id="message" style="font-size: 60px;">Clique sur le coffre-fort pour l'ouvrir!</div>
+        </div>
+    </div>
+   
+</body>
+</html>

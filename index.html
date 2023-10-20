@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire de mot de passe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #0074d9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 70px;">Entrez le mot de passe:</h1>
+        <input type="text" id="passwordInput" placeholder="Entrez le mot de passe" style="font-size: 50px;">
+        <button onclick="checkPassword()" style="font-size: 65px;">Vérifier</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var passwordInput = document.getElementById("passwordInput");
+            var message = document.getElementById("message");
+
+            if (passwordInput.value === "9876543211") {
+                message.innerText = "Mot de passe valide!";
+                // Rediriger vers la page de félicitation
+                window.location.href = "page_felicitation.html";
+            } else {
+                message.innerText = "Mot de passe incorrect. Réessayez.";
+            }
+        }
+    </script>
+</body>
+</html>
