@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Formulaire de mot de passe</title>
     <style>
         body {
@@ -8,21 +9,25 @@
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+           /* margin: 0 auto;*/
+           margin-top: -150px;
+           margin-left: 5% ;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            
+            
         }
         input[type="text"] {
             width: 100%;
             height: 50px;
             padding: 10px;
-            margin: 10px 0;
+            text-align: center;
         }
         button {
             padding: 10px 20px;
-            background-color: #0074d9;
-            color: #fff;
+            background-color: #6c7175;
+            color: #000000;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -30,12 +35,26 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 style="font-size: 70px;">Entrez le mot de passe:</h1>
-        <input type="text" id="passwordInput" placeholder="Entrez le mot de passe" style="font-size: 50px;">
-        <button onclick="checkPassword()" style="font-size: 65px;">Vérifier</button>
-        <p id="message"></p>
+    <div class="notepad">
+        <div class="toolbar">
+            <h1>Bloc Note</h1>
+            <button id="saveButton">Enregistrer</button>
+        </div>
+        <textarea id="noteArea" placeholder="Écrivez votre note ici... N'oubliez pas d'enregistrer"></textarea>
     </div>
+    <video width="920" height="840" autoplay muted playsinline loop >
+        <source src="recherche.mp4" type=video/mp4>
+        </video>
+        <div class="container">
+            <h1 style="font-size: 70px;">Entrez le mot de passe:</h1>
+            <input type="text" id="passwordInput" placeholder="Entrez le mot de passe" style="font-size: 50px;">
+            <button onclick="checkPassword()" >Vérifier</button>
+            <p id="message"></p>
+        </div>
+    
+    
+    <image style="margin-bottom: 50px; margin-left: 700px;" src="chercheur.svg"></image>
+    <script src="script.js"></script>
 
     <script>
         function checkPassword() {
