@@ -1,75 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Formulaire de mot de passe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 800px;
-           /* margin: 0 auto;*/
-           margin-top: -150px;
-           margin-left: 5% ;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            
-            
-        }
-        input[type="text"] {
-            width: 100%;
-            height: 50px;
-            padding: 10px;
-            text-align: center;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #6c7175;
-            color: #000000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 40px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vindrac Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
+
+
+
 <body>
-    <div class="notepad">
-        <div class="toolbar">
-            <h1>Bloc Note</h1>
-            <button id="saveButton">Enregistrer</button>
+    <!-- start Quiz button -->
+    <div class="start_btn"><button class="restart">Commencer le Quiz</button></div>
+
+    <!-- Info Box -->
+     <div class="info_box">
+        <div class="info-title"><span>Un peu d'histoire</span></div>
+         <div class="info-list">
+            
+            <div class="info"> L'église St Martin du XVème siècle est remarquable par son clocher à base carrée; au XVI ème siècle sont bâtis 2 étages octogonaux, les piles du 2ème sont montées à l'aplomb des baies de l'étage inférieur, les arêtes restant au même emplacement en plan.Elle abrite un lumineux plafond peint du XIX et une pietà peinte sur bois du XVIème ou XVIIème siècle.</div>
+    
         </div>
-        <textarea id="noteArea" placeholder="Écrivez votre note ici... N'oubliez pas d'enregistrer"></textarea>
+        <div class="buttons">
+            <button class="quit">Sortir</button>
+            <button class="restart">Continuer</button>
+        </div>
     </div>
-    <video width="920" height="840" style="margin-top: -105px;" autoplay muted playsinline loop >
-        <source src="recherche.mp4" type=video/mp4>
-        </video>
-        <div class="container">
-            <h1 style="font-size: 70px;">Entrez le mot de passe:</h1>
-            <input type="text" id="passwordInput" placeholder="Entrez le mot de passe" style="font-size: 50px;">
-            <button onclick="checkPassword()" >Vérifier</button>
-            <p id="message"></p>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Eglise saint Martin Quiz </div>
+            
+            <!--<div class="timer">
+                <div class="time_left_txt"></div>
+                <div class="timer_sec"></div>
+            </div>
+            <div class="time_line"></div>-->
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Suivant</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
         </div>
-    
-    
-    <image style="margin-bottom: 50px; margin-left: 700px;" src="chercheur.svg"></image>
+        <div class="complete_text">Vous avez terminé le quiz de l'église saint Martin!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Rejouer</button>
+            <a href="https://umap.openstreetmap.fr/fr/map/vindrac-alayrac_971206#16/44.0676/1.9206"><button class="quit">Quitter</button></a>
+        </div>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <!-- <script src="js/questions.js"></script> -->
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="question.js"></script>
     <script src="script.js"></script>
-
-    <script>
-        function checkPassword() {
-            var passwordInput = document.getElementById("passwordInput");
-            var message = document.getElementById("message");
-
-            if (passwordInput.value === "9876543211") {
-                message.innerText = "Mot de passe valide!";
-                // Rediriger vers la page de félicitation
-                window.location.href = "page_felicitation.html";
-            } else {
-                message.innerText = "Mot de passe incorrect. Réessayez.";
-            }
-        }
-    </script>
 </body>
 </html>
+
